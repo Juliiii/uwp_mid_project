@@ -1,0 +1,99 @@
+﻿<Page x:ConnectionId='1'
+    x:Class="midpro.details"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:midpro"
+    xmlns:md="using:midpro.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <ScrollViewer>
+        <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid Grid.Column="0" Background="BlueViolet">
+                <Button x:ConnectionId='15' FontFamily="Segoe MDL2 Assets" 
+                    Content="&#xE830;" 
+                    VerticalAlignment="Top" 
+                    Width="40" 
+                    Height="40"
+                    Background="BlueViolet"
+                    Foreground="White"
+                                      
+                    x:Name="Back"/>
+                <TextBlock Text="详情" TextAlignment="Center" FontSize="20" Foreground="White" Margin="50, 0, 50, 0" VerticalAlignment="Center"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="3*"/>
+
+                </Grid.ColumnDefinitions>
+                <Rectangle Grid.Column="0" HorizontalAlignment="Left" Height="80" VerticalAlignment="Top" Width="80" Margin="10,20,10,0">
+                    <Rectangle.Fill>
+                        <ImageBrush x:ConnectionId='14' ImageSource="Assets/loading.gif" x:Name="avatar"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <StackPanel Grid.Column="1" Margin="0,20,10,0">
+                    <TextBlock x:ConnectionId='6' x:Name="name" Text="name" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="18"/>
+                    <TextBlock x:ConnectionId='7' x:Name="content" Text="ContentContentContentContentContentContentContentContent" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="16" Margin="0,10,0,0" TextWrapping="Wrap"/>
+                    <Image x:ConnectionId='8' x:Name="image" Source="Assets/loading.gif" Stretch="Uniform" Margin="0,20,0,0"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock x:ConnectionId='12' x:Name="createdTime" Text="name" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14" Foreground="Gray"/>
+                        <Button Background="White" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Like"></SymbolIcon>
+                            </StackPanel>
+                        </Button>
+                        <Button x:ConnectionId='13' Background="White" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10,0,0,0"                     >
+                            <StackPanel Orientation="Horizontal">
+                                <SymbolIcon Symbol="Comment"></SymbolIcon>
+                            </StackPanel>
+                        </Button>
+                    </StackPanel>
+                    <StackPanel x:ConnectionId='9' Orientation="Horizontal" x:Name="xxxx" Visibility="Collapsed">
+                        <TextBox x:ConnectionId='10' x:Name="commentBox" Margin="0, 20, 30, 0" PlaceholderText="评论一下..." Width="280"></TextBox>
+                        <Button x:ConnectionId='11'  Content="评论" Background="BlueViolet" Foreground="White" Margin="0, 20, 0,0"                      />
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+            <Grid Grid.Row="2" Margin="20"  Background="#ffebee">
+                <ListView x:ConnectionId='2'                                     IsItemClickEnabled="False">
+                    <ListView.ItemTemplate>
+                        <DataTemplate                        >
+                            <Grid x:ConnectionId='3'>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="2*"/>
+                                    <ColumnDefinition Width="10"/>
+                                    <ColumnDefinition Width="3*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock x:ConnectionId='4'                          
+                                               Foreground="BlueViolet" 
+                                               FontSize="16"
+                                               Margin="10, 0, 0, 0"
+                                               VerticalAlignment="Top"
+                                               Grid.Column="0"/>
+                                <TextBlock Text=":" 
+                                               Foreground="Black" 
+                                               FontSize="16"
+                                               VerticalAlignment="Top"
+                                               Grid.Column="1"/>
+                                <TextBlock x:ConnectionId='5'                         
+                                            Foreground="Black" 
+                                            FontSize="16"
+                                            TextWrapping="Wrap"
+                                            VerticalAlignment="Top"
+                                            Margin="0, 0, 0, 0"
+                                            Grid.Column="2"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</Page>
+

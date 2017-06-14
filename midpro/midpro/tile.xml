@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<tile>
+  <visual>
+    <binding template="TileSmall">
+      <text hint-style="base" hint-align="center">Small</text>
+      <text hint-style="captionsubtle" hint-align="center">Middle</text>
+      <image src ="Assets/background.jpg" placement ="background"></image>
+    </binding>
+
+    <binding template="TileMedium">
+      <text hint-style="base" hint-align="center">Middle</text>
+      <text hint-style="captionsubtle" hint-align="center">Middle</text>
+      <image src ="Assets/background.jpg" placement ="background"></image>
+    </binding>
+
+    <binding template="TileWide">
+      <text hint-style="base" hint-align="center">Large</text>
+      <text hint-style="captionsubtle" hint-align="center">Middle</text>
+      <image src ="Assets/background.jpg" placement ="background"></image>
+    </binding>
+  </visual>
+</tile>
